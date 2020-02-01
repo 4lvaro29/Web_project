@@ -133,14 +133,10 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
-
-
-
 .btn-white {
   background-color: #fff;
   color: #777;
 }
-
 .btn::after{
   content: "";
   display: inline-block;
@@ -153,18 +149,13 @@ body {
   z-index: -1;
   transition: all .4s;
 }
-
 .btn-white::after{
   background-color: #fff;
-
 }
-
 .btn:hover::after{
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
-
-
 .btn-animated{
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
