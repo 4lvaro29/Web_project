@@ -7,7 +7,9 @@
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "engines": {
-    "node": "10.19.0"
+    "start": "node server.js",
+    "node": "10.19.0",
+    "npm": "6x"
   },
   "author": "Alvaro U.",
   "license": "ISC",
