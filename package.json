@@ -9,7 +9,7 @@
   "engines": {
     "start": "node server.js",
     "node": "10.19.0",
-    "npm": "6x"
+    "npm": "6.13.4"
   },
   "author": "Alvaro U.",
   "license": "ISC",
