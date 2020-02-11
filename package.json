@@ -1,13 +1,9 @@
 {
   "name": "web",
-  "config": {
-    "port":"8080"
-  },
   "version": "1.0.0",
   "description": "landing page",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "npm start server.js",
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "engines": {
@@ -18,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
