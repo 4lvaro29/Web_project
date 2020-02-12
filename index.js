@@ -1,13 +1,11 @@
-express = require("express"),
-path = require("path"),
-app = express(),
-port = process.env.PORT || 3000;
+var express = require("express"),
+var path = require("path"),
+var app = express(),
+var port = process.env.PORT || 3000;
+
+app.use(express.static(__dirname + '/public/'));
 
     app.listen('3000',function(){
-      console.log('server ok listen to 3000 port')
-    })
-    app.get('/index.html', (peticion, respuesta) => {
-      // Servir archivo HTML, o cualquier otro archivo
-      let rutaDeArchivo = path.join(__dirname, "index.html");
-      respuesta.sendFile(rutaDeArchivo);
-  });
+      console.log(`server ok listen in port #{port}`)
+    
+    });
