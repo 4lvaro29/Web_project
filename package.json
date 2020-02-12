@@ -2,7 +2,7 @@
   "name": "web",
   "version": "1.0.0",
   "description": "landing page",
-  "main": "server.js",
+  "main": "node server.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
