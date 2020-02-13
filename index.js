@@ -1,21 +1,28 @@
+
 var express = require('express');
 var bodyParser = require('body-parser');
+const hostname = '127.0.0.1';
 
 var app = express();
-var port = process.env.PORT || 3525;
+var port = process.env.PORT || 8080 ;
 
 // Convierte una petición recibida (POST-GET...) a objeto JSON
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-app.get('/', function(req, res){
-	res.status(200).send({
-		message: 'GET Home route working fine!'
-	});
+app.set('port', (process.env.PORT || 8080));
+app.use(express.static(__dirname + '/'));
+app.set('views', __dirname + '/');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
+app.get('*', function(req, res){
+  res.render('index.html');
 });
 
-app.listen(port, function(){
-	console.log(`Server running in http://localhost:${port}`);
+app.listen(port, hostname, function(){
+  console.log(`Server running in http://localhost:${port}`);
+  console.log(`Server running at http://${hostname}:${port}/`);
 	console.log('Defined routes:');
-	console.log('	[GET] http://localhost:3525/');
+	console.log('	[GET] http://localhost:8080/');
 });

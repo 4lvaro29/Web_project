@@ -4,7 +4,9 @@
   "description": "landing page",
   "main": "node index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "test": "nodemon index.js",
+    "start": "node index.js"
   },
   "engines": {
     "node": "10.19.0",
@@ -17,6 +19,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
     "nodemon": "^2.0.2"
   }
