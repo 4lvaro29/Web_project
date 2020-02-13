@@ -4,7 +4,7 @@
   "description": "landing page",
   "main": "index.js",
   "scripts": {
-    "start":"node index.js",
+    "start": "node index.js",
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "engines": {
@@ -15,5 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
